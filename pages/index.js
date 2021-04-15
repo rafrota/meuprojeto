@@ -1,25 +1,15 @@
-import { useState } from "react"
+import Link from "next/link"
 
 function Home() {
     return (
         <div>
             <h1>Home</h1>
-            <Contador />
-        </div>
-    )
-}
-
-function Contador() {
-    const [contador,setContador] = useState(1);
-
-    function adicionaContador() {
-        setContador(contador+1);
-    }
-
-    return  (
-        <div>
-            <div>{contador}</div>
-            <button onClick={adicionaContador}>Adicionar</button>
+            <Link href="/sobre">
+                <a>Link para Sobre</a>
+            </Link>
+            <Link href="/tempo">
+                <a>Link para Tempo</a>
+            </Link>
         </div>
     )
 }
